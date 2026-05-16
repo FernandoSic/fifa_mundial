@@ -4,9 +4,8 @@
 
 ## Enlaces
 
-- **Repositorio:** [URL del repo]
-- **Frontend:** [URL del deploy frontend]
-- **Backend:** [URL del deploy backend]
+- **Repositorio:** https://github.com/FernandoSic/fifa_mundial.git
+- **Desplegada:** https://fifa-mundial.vercel.app/
 
 ---
 
