@@ -102,6 +102,7 @@ export default function App() {
 
       <main className="mx-auto max-w-5xl space-y-6 px-6 py-6">
         <EquipoForm
+          key={editingEquipo?.id ?? 'new'}
           onSubmit={editingEquipo ? handleUpdate : handleCreate}
           editingEquipo={editingEquipo}
           onCancel={handleCancelEdit}
