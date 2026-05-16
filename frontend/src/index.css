@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pitch: #1a5632;
+  --color-pitch-light: #e8f5e9;
+  --color-gold: #c8960c;
+  --color-gold-light: #fef3c7;
+  --color-whistle: #f5f5f0;
+  --color-fifa-blue: #0a1c3a;
+  --color-card: #ffffff;
+  --color-danger: #c41230;
+  --color-success: #2d8a4e;
+
+  --color-ink: #0a1c3a;
+  --color-ink-dim: #5a677a;
+  --color-ink-faint: #8a94a3;
+  --color-ink-ghost: #b8bec8;
+
+  --color-line: rgba(0, 0, 0, 0.1);
+  --color-line-subtle: rgba(0, 0, 0, 0.06);
+  --color-line-strong: rgba(0, 0, 0, 0.18);
+  --color-ring: #c8960c;
+
+  --font-body: Inter, sans-serif;
+  --font-display: Inter Tight, sans-serif;
+  --font-mono: JetBrains Mono, monospace;
+
+  --radius-input: 0.375rem;
+  --radius-card: 0.5rem;
+  --radius-badge: 9999px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-whistle);
+  color: var(--color-ink);
+}
