@@ -8,7 +8,7 @@ const grupoRoutes = require('./routes/grupo.routes')
 
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
     })
 )
 
@@ -19,7 +19,7 @@ app.use('/grupos', grupoRoutes)
 
 app.get('/', (req, res) => {
     res.json({
-        message: 'Mini POS API funcionando',
+        message: 'FIFA Mundial API funcionando',
     })
 })
 
