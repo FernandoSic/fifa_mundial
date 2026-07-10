@@ -5,6 +5,7 @@ const create = async (req, res) => {
         const equipo = await createEquipo(req.body)
         res.status(201).json(equipo)
     } catch (error) {
+        console.error('Error en create equipo:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -14,6 +15,7 @@ const getAll = async (req, res) => {
         const equipos = await getEquipos()
         res.json(equipos)
     } catch (error) {
+        console.error('Error en getAll equipos:', error)
         res.status(500).json({ message: error.message })
     }
 }
@@ -23,6 +25,7 @@ const getById = async (req, res) => {
         const equipo = await getEquipoById(req.params.id)
         res.json(equipo)
     } catch (error) {
+        console.error('Error en getById equipo:', error)
         res.status(404).json({ message: error.message })
     }
 }
@@ -35,6 +38,7 @@ const update = async (req, res) => {
             equipo,
         })
     } catch (error) {
+        console.error('Error en update equipo:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -47,6 +51,7 @@ const remove = async (req, res) => {
             equipo,
         })
     } catch (error) {
+        console.error('Error en remove equipo:', error)
         res.status(400).json({ message: error.message })
     }
 }

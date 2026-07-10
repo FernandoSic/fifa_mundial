@@ -5,6 +5,7 @@ const generate = async (req, res) => {
         const resultado = await generarGrupos(req.body.cantidad_grupos)
         res.json(resultado)
     } catch (error) {
+        console.error('Error en generate grupos:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -14,6 +15,7 @@ const save = async (req, res) => {
         const resultado = await saveGrupos(req.body)
         res.status(201).json(resultado)
     } catch (error) {
+        console.error('Error en save grupos:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -23,6 +25,7 @@ const create = async (req, res) => {
         const grupo = await createGrupo(req.body)
         res.status(201).json(grupo)
     } catch (error) {
+        console.error('Error en create grupo:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -35,6 +38,7 @@ const update = async (req, res) => {
             grupo,
         })
     } catch (error) {
+        console.error('Error en update grupo:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -47,6 +51,7 @@ const remove = async (req, res) => {
             grupo,
         })
     } catch (error) {
+        console.error('Error en remove grupo:', error)
         res.status(400).json({ message: error.message })
     }
 }
@@ -56,6 +61,7 @@ const getAll = async (req, res) => {
         const grupos = await getGrupos()
         res.json(grupos)
     } catch (error) {
+        console.error('Error en getAll grupos:', error)
         res.status(500).json({ message: error.message })
     }
 }
@@ -65,6 +71,7 @@ const getById = async (req, res) => {
         const grupo = await getGrupoById(req.params.id)
         res.json(grupo)
     } catch (error) {
+        console.error('Error en getById grupo:', error)
         res.status(404).json({ message: error.message })
     }
 }
